@@ -86,11 +86,11 @@ callback(action, data)
 #### Example for addAction:
 ```
 sdk.addAction({
-  actionType: 'click’,
-  boundToSelector: '#thisButton’,
-  actionDataSelector: '#input1, #input2’,
+  actionType: 'click',
+  boundToSelector: '#thisButton',
+  actionDataSelector: '#input1, #input2',
   beforeSendCallBack: null,
-  eventName: 'My Event 1’,
+  eventName: 'My Event 1',
 });
 ```
 
@@ -150,11 +150,11 @@ addAction(action)
 Example:
 ```
 sdk.addAction({
-  actionType: 'click’,
-  boundToSelector: '#thisButton’,
-  actionDataSelector: '#input1, #input2’,
+  actionType: 'click',
+  boundToSelector: '#thisButton',
+  actionDataSelector: '#input1, #input2',
   beforeSendCallBack: null,
-  eventName: 'My Event 1’,
+  eventName: 'My Event 1',
 });
 ```
 
