@@ -1,13 +1,22 @@
 # Snazzy SDK
 
-The purpose of this SDK is to offer a number of simple function to create and update persons within SnazzyContacts. Users will be able ot include this SDK as part of their website, letting them create persons within their SnazzyContacts account whenever a website visitor takes certain actions, such as filling out a contact form.
+The purpose of this SDK is to offer a number of simple function to create and update persons within SnazzyContacts. Users will be able to include this SDK as part of their website, letting them create persons within their SnazzyContacts account whenever a website visitor takes certain actions, such as filling out a contact form.
 
 ## API
+
+Before using the SDK a new instance has to be created.
+
+```
+sdk = new snazzySdk;
+```
 
 ### snazzySDK.init()
 
 Initialise the sdk.
 
+```
+sdk.init();
+```
 
 ### snazzySDK.setId()
 
@@ -27,6 +36,48 @@ sdk.createNew(data)
 
 ### snazzySDK.addAction()
 
+Define an action that is execute when an DOM event on one or more specified elements is triggered (see also action based workflow below).
+
+#### actionType
+
+Any valid event on the browser window, including 'click', 'mouseenter', 'mouseleave', 'mousemove', 'blur' and 'beforeunload'.
+
+Further more 'document.visible' and 'document.visible' for document visibilitychange events and 'error' which fires on page errors.
+
+#### boundToSelector
+
+A DOM selectors-string specifying the element on which to listen for an action.
+
+Example: Selecting all have the class "button" and the class "submit-button"
+```
+.button.submit-button
+```
+
+#### actionDataSelector
+
+A string of selectors specifiying the element(s) from which data will be take if the action is executed. Elements have to be separated with a ",". If several elements match the selector each of them will be added to the data send via the sdk.
+
+Example 1: Selecting all fields with the class "fields" from the specified form1
+```
+#form1 .fields
+```
+
+Example 2: Selecting only the elements with the ids "field1" and "field2"
+```
+#field1, #field2
+```
+
+#### beforeSendCallBack (optional)
+
+Field for providing an optional callback function that will be executed before any data is send. The provided function will receive the action object and the prepared data.
+
+If the callback function returns false no data will be send. Otherwise the returned data will be send.
+
+```
+callback(action, data)
+```
+
+#### Example for addAction:
 ```
 sdk.addAction({
   actionType: 'click’,
