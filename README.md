@@ -7,8 +7,12 @@ The purpose of this SDK is to offer a number of simple function to create and up
 Before using the SDK a new instance has to be created.
 
 ```
-sdk = new snazzySdk;
+sdk = new snazzySdk({apiKey: 'YOUR API KEY'});
 ```
+
+Optionally the an id can be directly speciefied on creation time via the attribute:
+
+foreignUid
 
 ### snazzySDK.init()
 
@@ -124,7 +128,7 @@ Data can either be send manually when desired (manual workflow) or automatically
 In any case you first have to create an instance of the sdk and Initialise it.
 
 ```
-sdk = new snazzySdk;
+sdk = new snazzySdk({ apiKey: 'YOUR API KEY' });
 sdk.init();
 ```
 
