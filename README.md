@@ -71,7 +71,8 @@ Example: Selecting all have the class "button" and the class "submit-button"
 
 A string of selectors specifiying the element(s) from which data will be take if the action is executed. Elements have to be separated with a ",". If several elements match the selector each of them will be added to the data send via the sdk.
 
-Example 1: Selecting all fields with the class "fields" from the specified form1
+Example 1: Selecting all fields with the class "fields" from the specified form with id #form1
+
 ```
 #form1 .fields
 ```
@@ -80,6 +81,8 @@ Example 2: Selecting only the elements with the ids "field1" and "field2"
 ```
 #field1, #field2
 ```
+
+you can also select elements without id or class with the standard DOM selectors. For example "form" would select all forms on a page.
 
 #### beforeSendCallBack (optional)
 
