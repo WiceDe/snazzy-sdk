@@ -91,6 +91,10 @@ If the callback function returns false no data will be send. Otherwise the retur
 callback(action, data)
 ```
 
+#### alternateWebhook (optional)
+
+If a url is supplied in the alternateWebhook field of the action that url will be used for instead of any globally set url.
+
 #### Example for addAction:
 ```
 sdk.addAction({
@@ -167,8 +171,6 @@ sdk.addAction({
   alternateWebhook: false,
 });
 ```
-
-If a url is supplied in the alternateWebhook field of the action the url will be used instead of the globally set url.
 
 ### Manual workflow
 
