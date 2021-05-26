@@ -112,17 +112,30 @@ sdk.addAction({
 ```
 sdk.setAttribute(type, value)
 ```
+
+Example 1: setAttribute('firstName', 'Joe')
+
+Example 1: setAttribute('categories', 'Category1, Category2')
+
 ### snazzySDK.addContactData()
 
 ```
 addContactData(type, value, categories)
 ```
 
+Example: addContactData('phone', '+49 123456')
+
+The optional variable categories can be one or more categories as comma separated string "Category1, Category2".
+
 ### snazzySDK.addAddress()
 
 ```
 addAddress(street, streetNumber, zipcode, city, categories)
 ```
+
+Example: addAddress('Someroad', '12', '12345', 'Somecity')
+
+The optional variable categories can be one or more categories as comma separated string "Category1, Category2".
 
 ### snazzySDK.addNote()
 
@@ -184,7 +197,7 @@ sdk.createNew()
 
 Execute one or more of the following command to aggregate data:
 
-Setting a attribute of a person or organization entry
+Setting a attribute of a person or organization entry.
 
 Example:
 
@@ -195,7 +208,7 @@ sdk.setAttribute('lastName', 'Doe')
 
 addContactData(type, value, categories)
 
-Example: addContactData('phone', '12345678')
+Example: addContactData('phone', '12345678', 'Category1, Category2')
 
 addAddress(street, streetNumber, zipcode, city, categories)
 
