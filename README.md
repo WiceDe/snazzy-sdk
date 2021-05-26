@@ -7,7 +7,7 @@ The purpose of this SDK is to offer a number of simple function to create and up
 Before using the SDK a new instance has to be created.
 
 ```
-sdk = new window.snazzySdk({apiKey: 'YOUR API KEY', webhookUrl: 'REQUIRED IF USING ACTIONS'});
+sdk = new window.snazzySdk({ webhookUrl: 'URL OF YOUR WEBHOOK' });
 ```
 
 Optionally the an id can be directly specified on creation time via the attribute:
@@ -26,10 +26,10 @@ sdk.init();
 
 ### snazzySDK.setWebhookUrl()
 
-If you want to use actions you need to create a webhook and set the WebhookUrl to send an match data. The url can also set when creating the sdk instance.
+You need to set a webhook to send an match data. The url can also set when creating the sdk instance. If changed later the newest webhookUrl will be used for sending.
 
 ```
-sdk.setWebhookUrl(id)
+sdk.setWebhookUrl(url)
 ```
 
 ### snazzySDK.setId()
@@ -99,6 +99,7 @@ sdk.addAction({
   actionDataSelector: '#input1, #input2',
   beforeSendCallBack: null,
   eventName: 'My Event 1',
+  alternateWebhook: false,
 });
 ```
 
@@ -138,7 +139,7 @@ Data can either be send manually when desired (manual workflow) or automatically
 In any case you first have to create an instance of the sdk.
 
 ```
-sdk = new window.snazzySdk({ apiKey: 'YOUR API KEY', webhookUrl: 'REQUIRED IF USING ACTIONS' });
+sdk = new window.snazzySdk({ webhookUrl: 'URL OF YOUR WEBHOOK' });
 ```
 
 Optional you can set a foreignId at any time. If not set a random identifier will be generated.
@@ -163,8 +164,11 @@ sdk.addAction({
   actionDataSelector: '#input1, #input2',
   beforeSendCallBack: null,
   eventName: 'My Event 1',
+  alternateWebhook: false,
 });
 ```
+
+If a url is supplied in the alternateWebhook field of the action the url will be used instead of the globally set url.
 
 ### Manual workflow
 
