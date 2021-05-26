@@ -16,6 +16,26 @@ foreignUid
 
 If 'skipInit:true' is set the init process will not executed on creation and has to be called manually as explained below.
 
+### Async loading
+
+Instead of waiting for script load you can also make the snazzySDK load asynchronous by creating in the following manner:
+
+```
+<script async src="https://api.snazzycontacts.com/sdk.js"></script>
+<script>
+function sdkLoaded() {
+  // SDK is loaded do something here ...
+}
+
+window.snazzySdk = {
+  settings: {
+    webhookUrl: 'YOUR WEBHOOK'
+  },
+  callback: sdkLoaded,
+}
+</script>
+```
+
 ### snazzySDK.init()
 
 Initialise the sdk. This call is only required if you have specified skipInit on instance creation for compactibility reasons.
