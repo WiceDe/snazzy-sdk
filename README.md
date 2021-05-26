@@ -46,7 +46,7 @@ sdk.init();
 
 ### snazzySDK.setWebhookUrl()
 
-You need to set a webhook to send an match data. The url can also set when creating the sdk instance. If changed later the newest webhookUrl will be used for sending.
+You need to set a webhookUrl to send an match data. The url can also set when creating the sdk instance. If changed later the newest webhookUrl will be used for sending.
 
 ```
 sdk.setWebhookUrl(url)
