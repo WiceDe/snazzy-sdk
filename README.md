@@ -21,7 +21,7 @@ If 'skipInit:true' is set the init process will not executed on creation and has
 Instead of waiting for script load you can also make the snazzySDK load asynchronous by creating in the following manner:
 
 ```
-<script async src="https://api.snazzycontacts.com/sdk.js"></script>
+<script async src="https://client-api.snazzycontacts.com/sdk/snazzySdk.min.js"></script>
 <script>
 function sdkLoaded() {
   // SDK is loaded do something here ...
